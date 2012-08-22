@@ -17,7 +17,7 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
     grep_ver_major=$(echo "$grep_ver" | head -1)
     grep_ver_minor=$(echo "$grep_ver" | head -2 | tail -1)
     if [ "$grep_ver_major" -eq "$grep_ver_major_min" -a "$grep_ver_minor" -lt "$grep_ver_minor_min" -o "$grep_ver_major" -lt "$grep_ver_major_min" ]; then
-        echo "grep version < 2.15, upgrade via 'sudo port install grep'" && exit 1
+        echo "grep version < 2.12, upgrade via 'sudo port install grep'" && exit 1
     fi
 
     # cut needs locale set to avoid "illegal byte sequence" error
